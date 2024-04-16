@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       
+        body {
+            background-color: #f8f9fa; /* Light gray background color */
+        }
+
+        .container {
+            background-color:darkseagreen; /* White container background color */
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="mb-4">Add Data Form</h2>
+        <form id="addData" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?></form>" method="POST">
+            <!-- Name Input -->
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="name of the place" required>
+            </div>
+
+            <!-- Description Input -->
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea class="form-control" id="description" name="description" rows="4"
+                    placeholder="Enter description" required></textarea>
+            </div>
+
+            <!-- Location Input -->
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" class="form-control" id="location" name="location" placeholder="Enter location"
+                    required>
+            </div>
+
+            <!-- Image Input -->
+            <div class="form-group">
+                <label for="image">Image URL:</label>
+                <input type="file" >
+            </div>
+
+            <!-- Specialty Input -->
+            <div class="form-group">
+                <label for="specialty">Specialty:</label>
+                <input type="text" class="form-control" id="specialty" name="speciality"
+                    placeholder="Enter specialty" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button id="one" type="submit" class="btn btn-primary"><a href="./abab.html" style="text-decoration: none; color:white;">Submit</a></button>
+            <a href="./monuments.html"><button type="button" class="btn btn-primary btn-sm" style="margin-left: 30px;">BACK</button></a>
+
+        </form>
+        
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
